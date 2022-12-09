@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style:  none;
+    text-decoration: none;
+}
+
+*::before, *::after{
+    box-sizing: border-box;
+ }
+
+body{
+    background-color: rgba(28,28,28,1.00);
+    color: white;
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.2rem;
+    overflow-x: hidden;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/titilka_hei.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    align-items: center;
+}
+
+/*----NAVIGATION----*/
+
+nav{
+    width:100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 6px 9px #1c2228;
+    
+}
+
+.logo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5rem;
+    margin: 1em;
+}
+
+
+nav ul{
+    width: 100%;
+    align-items: center;
+}
+
+nav li{
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+nav li a{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.5em;
+    
+}
+
+nav li:hover,
+nav li:active{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    transition: .5s;
+}
+
+nav li a:hover,
+nav li a:active{
+    color: black;
+    transition: .5s;
+}
+
+ul .social-menu{
+    display: flex;
+    justify-content: center;
+
+}
+
+.social-menu li{
+    padding: 0.5em;
+    border-radius: 5px;
+
+}
+
+.social.menu li:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    transition: .5s;
+}
+
+/*----HERO----*/
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    text-align: center;
+}
+
+.hero-text{
+    margin-top: 30vh;
+    margin-bottom: 10%;
+    
+}
+
+.cta-button{
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 4px 6px 9px #1c2228;
+    border-radius: 2px;
+}
+
+.cta-button a{
+    color: white; 
+    letter-spacing: 1px;
+}
+
+.cta-button:hover,
+.cta-button:active{
+    background-color:rgba(255, 255, 255, 0.8); 
+    color: black;
+    transition: .3s;
+}
+
+.cta-button a:hover,
+.cta-button a:active{
+    color: black;
+    transition: .3s;
+}
+
+
+/*----HAMBURGER MENU----*/
+
+.main-menu{
+    display: none;
+}
+
+.toggle-menu{
+    display: none;
+}
+
+.toggle-menu:checked ~ .main-menu{
+    display: block;
+}
+
+.toggle-menu-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 2em;
+    margin-top: 1.8em;
+}
+
+.toggle-menu-label span, 
+.toggle-menu-label span::before,
+.toggle-menu-label span::after{
+    display: block;
+    background-color: white;
+    width: 2em;
+    height: 4px;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-menu-label span::before,
+.toggle-menu-label span::after{
+    content: '';
+    position: absolute;
+}
+
+.toggle-menu-label span::before{
+    top: 7px;
+    
+}
+
+.toggle-menu-label span::after{
+    bottom: 7px;
+}
+ 
+/*----NEWS SECTION----*/
+
+h2{
+    text-align: center;
+    margin: 1em;
+}
+
+.news-grid-container{
+    width: 90%;
+    margin: 0 auto;
+} 
+
+.news-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.card{
+    overflow: hidden;
+    color: rgba(28,28,28,1.00);
+    padding: 1.2em;
+    background-color: #eeeeee;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-1%);
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px;
+}
+
+.card-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+
+.readmore-btn{
+    display: block;
+    width: 3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(28,28,28,1.00);
+    font-weight: 600;  
+    transition: .2s;
+}
+
+.readmore-btn:hover{
+    color: white;
+    font-weight: 400;
+}
+
+/*---TABLE---*/
+
+
+.table-container{
+    width: 100%;
+    background-color: black;
+    height: 20em;
+    background-image: url(images/norweigan_forest.jpg);
+    background-position: 40% 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    height: auto;
+}
+
+/***OPACITY WITHOUT AFFECTING THE TEXT***/
+
+.table-container::after{
+    content: '';
+    position: absolute;
+    background-color: #1c2228;
+    z-index: -1;
+    inset: 0;
+    opacity: .7;
+
+}
+
+.table-heading{
+    padding: 1em;
+}
+
+.table{
+    max-width: 90%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+
+.table-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(2.2em auto);
+    gap: 2em;
+    text-align: center;
+    
+}
+
+.article-bio{
+    background-image: url(images/pergamen.jpg;
+    )
+}
+
+/*---DESKTOP VERSION---*/
+
+@media screen and (min-width:50em){
+   
+    body{
+        font-size: 1.3rem;
+    }
+    
+    .toggle-menu-label{
+        display: none;
+    }
+
+    .toggle-menu:checked ~ .main-menu{
+        all: unset;
+    }
+
+    nav{
+        all: unset;
+        width: 100vw;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 4px 6px 9px #1c2228;
+    }
+
+    .logo{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-menu{
+        display: flex;
+        justify-content: space-around;
+        width: 68%;
+    }
+
+    .main-menu .social-menu{
+        width: 48%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .main-menu li{
+        padding: 1.5;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        border-radius: 5%;
+    }
+
+    .social-menu li{
+        margin-right: .5em;
+    }
+
+
+    /*HERO*/
+
+    h1{
+        font-size: 2em;
+    }
+
+    .hero-text{
+        all: unset;
+        margin-top: 30vh;
+        margin-bottom: 10%;
+
+    }
+
+    /*---NEWS SECTION---*/
+
+    .news-grid{
+        all: unset;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
+    }
+
+    /*---TABLE---*/
+
+    .table-grid{
+        all: unset;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 10em;
+        row-gap: 4em;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
