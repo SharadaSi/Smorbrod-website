@@ -47,9 +47,13 @@ nav{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
     margin: 1em;
+    
 }
 
-
+.logo-pages{
+    text-decoration: none;
+    color: white;
+}
 nav ul{
     width: 100%;
     align-items: center;
@@ -257,6 +261,7 @@ h2{
     height: 20em;
     background-image: url(images/norweigan_forest.jpg);
     background-position: 40% 70%;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -265,7 +270,7 @@ h2{
     height: auto;
 }
 
-/***OPACITY WITHOUT AFFECTING THE TEXT***/
+/***OPACITY of IMAGE behind TABLE WITHOUT AFFECTING THE TEXT***/
 
 .table-container::after{
     content: '';
@@ -297,10 +302,47 @@ h2{
     
 }
 
-.article-bio{
-    background-image: url(images/pergamen.jpg;
-    )
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: end;
+    
 }
+
+.footer-contact{
+    display: flex;
+    
+}
+
+.message-icon:hover{
+   transform: translateY(-10%);
+   transition: 0.3s;
+}
+
+
+/*-----BIOGRAFIE PAGE-----*/
+
+
+.biografie{
+    background-image: url(images/pergamen.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.nav-bio{
+    background-color: rgba(28,34,40,0.5);
+    z-index: 2;
+}
+
+.article-bio{
+    max-width: 75%;
+    margin: 0 auto;
+    color: rgba(28,28,28,1.00);
+}
+
 
 /*---DESKTOP VERSION---*/
 
